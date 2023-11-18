@@ -13,7 +13,7 @@ faceCascade = cv2.CascadeClassifier('Haar\haarcascade_frontalface_default.xml') 
 while True:
     ignore, frame = cam.read()
     frameGray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    faces = faceCascade.detectMultiScale(frameGray, 1.3, 5)
+    faces = faceCascade.detectMultiScale(frameGray, 1.3, 5) # The second digit shows how much you trust the AI. Try changing it if the script is acting weird
 
     for face in faces:
         x, y, w, h = face
